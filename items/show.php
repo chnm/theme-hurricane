@@ -1,36 +1,22 @@
 <?php head(array('title' => item('Dublin Core', 'Title'), 'bodyclass' => 'item')); ?>
 
 <div id="show">
-	
 	<?php if (item_has_thumbnail()): ?>
-	  
-	
-		<class="element">
+	 	<class="element">
 	    	<div class="element-text">
-				
 		<div id="main-image">
-			
-										
-				<?php $files = $item->Files;
-										$firstFile = $files[0];
-										if ($firstFile)
-										{ echo display_file($firstFile, $options = array('imageSize' => 'fullsize'));
-
-									}
-										?>
-							
-			
+		<?php $files = $item->Files;
+	              $firstFile = $files[0];
+		      if ($firstFile){  
+		         echo display_file($firstFile, $options = array('imageSize' => 'fullsize'));
+                      }
+		?>
 </div>
 	
 
 
 
 <?php endif; ?>
-
-	
-
-
-	
 	<!--  The following function prints all the the metadata associated with an item: Dublin Core, extra element sets, etc. See http://omeka.org/codex or the examples on items/browse for information on how to print only select metadata fields. -->
 	<div id="metadata">
 		<?php if (item_belongs_to_collection()): ?>
@@ -55,24 +41,24 @@
 	<!-- The following returns all of the files associated with an item. -->	
 <?php if (item_has_files()): ?>
 	<?php if (item_has_thumbnail()): ?>
-			
 		<?php $files = $item->Files;
-								$secondFile = $files[1];
-								if ($secondFile)
-								{ ?> <div class="files" class="element">
-									<div class="element-text">
-										<h4>Files:</h4> <?php echo display_file($secondFile, $options = array('imageSize' => 'thumbnail'));
-
-							}
-								?>		
-								<?php $files = $item->Files;
-														$thirdFile = $files[2];
-														if ($thirdFile)
-														{ echo display_file($thirdFile, $options = array('imageSize' => 'thumbnail'));
-
-													}
-														?>
-														<?php $files = $item->Files;
+			$secondFile = $files[1];
+			if ($secondFile) { 
+	         ?> 
+		    <div class="files" class="element">
+		    <div class="element-text"> 
+		    <h4>Files:</h4> 
+		    <?php echo display_file($secondFile, $options = array('imageSize' => 'thumbnail'));
+		}
+	?>		
+	<?php $files = $item->Files;
+              $thirdFile = $files[2];
+	      if ($thirdFile)
+	      { 
+	        echo display_file($thirdFile, $options = array('imageSize' => 'thumbnail'));
+              }
+	?>
+	<?php $files = $item->Files;
 																				$fourthFile = $files[3];
 																				if ($fourthFile)
 																				{ echo display_file($fourthFile, $options = array('imageSize' => 'thumbnail'));

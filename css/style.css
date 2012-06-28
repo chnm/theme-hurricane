@@ -101,11 +101,11 @@ div.vcard>div {font-size: 1.2em;line-height: 1.75em;}
 .hdmb-subtitle {border: 1px solid #c6d688;
 background: #c6d6c2;
 padding: 7px 0px 3px 0px;
-border-radius: 0px 0px 0px 0px;}
+border-radius: 14px 14px 0px 0px;}
 
 .hdmb-subtitle h1 { 
 	visibility: hidden;
-	border-top-right-radius: 14px;
+
 }
 .blurb {padding: 0px 110px 0px 280px; background: #fff; margin-top: 20px; margin-left: 10px;
 	}
@@ -147,7 +147,8 @@ ul#mainnav li a { display:inline;color: #111;
 	 background-repeat: no-repeat;color: #111;
 	}
 	
-li.nav-home a {border-radius: 7px 0px 0px 7px;}
+li.nav-home a {border-radius: 7px 0px 0px 0px;}
+li.nav-add-to-memory-bank a {border-radius: 0px; 7px; 0px; 0px;}
 li.nav-advanced-search a {border-radius: 0px 0px 0px 0px;}
 ul#mainnav li a:link, ul#mainnav li a:visited {background-color: #c6d6c2;}
 ul#mainnav li a:hover, ul#mainnav li a:active {background-color: #BCCCDD;} 
