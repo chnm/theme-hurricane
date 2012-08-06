@@ -37,10 +37,10 @@
 		<div id="home" class="secondary">
 				<h2>Featured Stories</h2>
 		<div class="story">
-				<p>&#8220;My family and I evacuated the Sunday before Katrina. We intended on staying and riding out the storm, but when we saw how much strength it had gained during the previous days of tracking it, we had no choice but to pack a couple of days&#8217; worth of clothes and food, and head out on a journey that we never would have expected.&#8221; <a href="http://hurricanearchive.org/object/12106">More...</a></p>
+				<p>&#8220;My family and I evacuated the Sunday before Katrina. We intended on staying and riding out the storm, but when we saw how much strength it had gained during the previous days of tracking it, we had no choice but to pack a couple of days&#8217; worth of clothes and food, and head out on a journey that we never would have expected.&#8221; <a href="http://hurricanearchive.org/items/show/12106">More...</a></p>
 				</div>
 			<div class="story">	
-				<p>&#8220;I evacuated to Baton Rouge for Hurricane Katrina. It was the most horrible experiences of my life. We were living in an apartment with fifteen other people. It was air matresses lined up from door to door. My parents and my...  <a href="http://hurricanearchive.org/object/12106">More..</a></p>
+				<p>&#8220;I evacuated to Baton Rouge for Hurricane Katrina. It was the most horrible experiences of my life. We were living in an apartment with fifteen other people. It was air matresses lined up from door to door. My parents and my...  <a href="http://hurricanearchive.org/items/show/12106">More..</a></p>
 				</div>
 				</div>	
 				<div id="home" class="tertiary">

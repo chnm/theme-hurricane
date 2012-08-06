@@ -1,4 +1,10 @@
 <?php head(array('title' => item('Dublin Core', 'Title'), 'bodyclass' => 'item')); ?>
+  
+   <?php 
+   	if(!preg_match("/Untitled/",item('Dublin Core','Title'))){
+		echo "<h1>".item('Dublin Core','Title')."</h1>";
+	}
+   ?>
 
 <div id="show">
 	<?php if (item_has_thumbnail()): ?>
@@ -22,11 +28,9 @@
 		<?php if (item_belongs_to_collection()): ?>
 			<h2>Collection</h2>
 		    <div><?php echo link_to_collection_for_item(); ?></div>
-		<?php endif; ?>   
-		 
-	
-		<?php echo show_item_metadata(array('show_empty_elements' => false)); ?>	
-	
+		<?php endif; ?>   	
+                <?php echo "<p>".item('Dublin Core','Description')."</p>";
+		  echo "<p>".item(null,'Text')."</p>"; ?>
 	<!-- If the item belongs to a collection, the following creates a link to that collection. -->
 
 		<!-- The following prints a list of all tags associated with the item -->
@@ -59,12 +63,12 @@
               }
 	?>
 	<?php $files = $item->Files;
-																				$fourthFile = $files[3];
-																				if ($fourthFile)
-																				{ echo display_file($fourthFile, $options = array('imageSize' => 'thumbnail'));
-
-																			}
-																				?>
+	$fourthFile = $files[3];
+	if ($fourthFile)
+	{ echo 
+		display_file($fourthFile, $options = array('imageSize' => 'thumbnail'));
+	}
+	?>
 		</div>
 	<?php else: ?>	
 	<div class="files" class="element">

@@ -143,19 +143,20 @@ ul#mainnav li {float: left; padding: 10px 0px;margin-right: 1px;
 	}
 ul#mainnav li a { display:inline;color: #111; 
 	 padding: 10px 21px; border-bottom: 1px solid #BCCCDD;  border-right: 1px solid #BCCCDD;
-	border-top: 1px solid #BCCCDD;
+	border-top: 1px solid #BCCCDD; 
+  border-radius: 7px 7px 0px 0px;
 	 background-repeat: no-repeat;color: #111;
 	}
 	
 li.nav-home a {border-radius: 7px 0px 0px 0px;}
-li.nav-add-to-memory-bank a {border-radius: 0px; 7px; 0px; 0px;}
 li.nav-advanced-search a {border-radius: 0px 0px 0px 0px;}
 ul#mainnav li a:link, ul#mainnav li a:visited {background-color: #c6d6c2;}
 ul#mainnav li a:hover, ul#mainnav li a:active {background-color: #BCCCDD;} 
+ul#mainnav li a:current, ul#mainnav li a:active {background-color: #BCCCDD;} 
 ul#mainnav li#nav-news { margin-right:0;}
 ul#mainnav a {text-decoration:none;} 
-ul#mainnav li.current a {}
-li.nav-home li.current a {background-color: #E1E8F0;}
+ul#mainnav li.current a {background-color:#BCCCDD;}
+li.nav-home li.current a {background-color:#BCCCDD;}
 /* Content styles
 ----------------------------------*/
 #content {display:block; float:left; clear:both; background: #BCCCDD; border-top: 1px solid #f7f7f7;
@@ -495,7 +496,7 @@ li.nav-by-tag a {border-radius: 0px 0px 0px 0px; }
 .previous li {float: left;}					
 #show {padding: 20px;}
 #main-image {text-align: center;}
-#main-image a img { height:100%; width:100% }
+#main-image a img { margin-right:480px; height:50%; width:50% }
 #collections .collection {width: 275px; height: 225px; overflow: hidden; float: left; background: #fff; 
 	margin: 10px 0px 10px 20px; padding: 10px 20px; background: #F3F6F9; border: 1px solid #B4BAC0;
 	border-radius: 14px;}
