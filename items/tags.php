@@ -1,18 +1,18 @@
-<?php head(array('title'=>'Browse Items','bodyid'=>'items','bodyclass'=>'tags')); ?>
+<?php echo head(array('title'=>'Browse Tags','bodyid'=>'items','bodyclass'=>'tags')); ?>
 <div id="items-heading">
-<div class="heading">  <h2> Items (<?php echo total_results(); ?> total) </h2>
+<div class="heading">  <h2> Tags</h2>
 	<ul class="navigation">
-		<li>Browse -></li>		<?php echo public_nav(array('All' => uri('items/browse'), 'Images' => uri('items?type=1'),'Stories' => uri('items?type=4'), 'Other files?' => uri('items?type=4'), 'Map' => uri('items/map'), 'By Tag' => uri('items/tags'))); ?>
+		<?php echo legacy_nav(array('All Items' => url('items/browse'), 'Images' => url('items?type=6'),'Stories' => url('items?type=1'),'Oral Histories' => url('items?type=4'), 'Video' => url('items?type=3'), 'Map' => url('items/map'), 'Tags' => url('items/tags'))); ?>
 	</ul> 
 </div>
 </div>
 	<div id="primary">
 
 		<?php 
-		$tags = get_tags(array('sort' => 'alpha'),null);
-		echo tag_cloud($tags,uri('items/browse')); 
+		$tags = get_records('Tag', array('sort_field' => 'name'),null);
+		echo tag_cloud($tags, 'items/browse'); 
 		?>
 
 	</div><!-- end primary -->
 
-	<?php foot(); ?>
+<?php echo foot(); ?>

@@ -1,4 +1,4 @@
-<?php head(array('title' => html_escape($collection->name),'bodyid'=>'collections','bodyclass' => 'show')); ?>
+<?php echo head(array('title' => html_escape($collection->name),'bodyid'=>'collections','bodyclass' => 'show')); ?>
 <div id="heading">
 <div class="heading">  <h2> <?php echo html_escape($collection->name); ?> </h2>
 	 </div></div>
@@ -10,24 +10,26 @@
 	            	<div class="element">
 
         <h3>Description</h3>
-        <div class="element-text"><p><?php echo nls2p(collection('Description')); ?></p></div>
+        <div class="element-text"><p><?php echo nl2br(metadata('collection', array('Dublin Core', 'Description'))); ?></p></div>
     </div><!-- end collection-description -->
     
-    <?php if(collection('Collectors')!=null) { ?>
+    <?php if(metadata('collection', array('Dublin Core', 'Contributor'))) { ?>
     <div id="collectors" class="element">
         <h3>Collector(s)</h3> 
         <div class="element">
-            <p><?php echo collection('Collectors', array('delimiter'=>'</li><li>')); ?></p>
+            <p><ul><li><?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('delimiter'=>'</li><li>')); ?></li></ul></p>
 	</div>
 	<?php } ?>
 
               <div class="collection-link">
-	            	<p> View items in:<?php echo link_to_browse_items( collection('Name'), array('collection' => collection('id'))); ?></p>      	
+    <?php if(metadata('collection', 'total_items')): ?> 
+			<p><?php echo link_to_items_browse('View this collection',array('collection' => $collection->id)); ?></p>
+			<?php endif;?>
 	            </div></div><!-- end class="collection" -->
 			    
-    <?php echo plugin_append_to_collections_show(); ?>
+    <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
 </div>
 <!-- end primary -->
 </div>
 </div>
-<?php foot(); ?>
+<?php echo foot(); ?>
